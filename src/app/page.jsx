@@ -1,10 +1,9 @@
 import React from 'react'
 import { Box, Button, IconButton, Rating, Typography } from '@mui/material'
-import { AccountCircle, ArrowBack, ArrowDownward, Construction, Group, Instagram, Star, StarHalf, Telegram, WhatsApp } from '@mui/icons-material'
+import { AccountCircle, ArrowBack, ArrowDownward  } from '@mui/icons-material'
 import Link from 'next/link'
 import Image from 'next/image'
-import Header from '@/components/ui/Header'
-
+  
 import p1 from "../../public/assets/products/p1.png"
 import p2 from "../../public/assets/products/p2.png"
 import p3 from "../../public/assets/products/p3.png"
@@ -18,7 +17,7 @@ import c3 from "../../public/assets/certificates/c3.png"
 
 import productimg from "../../public/assets/products/product-w.png"
 
-import bgimg from "../../public/assets/header-1.jpg"
+import Product from '@/components/ui/Product'
 
 
 export const products = [
@@ -114,10 +113,6 @@ const Home = async () => {
 
 
   return (
-    // <div>
-    //   <Typography variant='h1' >hello</Typography>
-    // </div>
-
 
     <div className='overflow-hidden px-2'>
 
@@ -155,7 +150,7 @@ const Home = async () => {
         <Box className="mt-20">
           <Box className="flex w-full items-center justify-between py-2">
             <Typography variant="h6" component="div" className="font-bold">
-              جدیدترین محصولات
+               محصولات
             </Typography>
             <Link href="/products">
               <Button
@@ -169,27 +164,7 @@ const Home = async () => {
           </Box>
           <Box className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-20 md:px-0">
             {products.slice(0, 4).map(product => (
-              <Box key={product.id} className="h-100 bg-white shadow-xl rounded-xl relative overflow-hidden group flex items-center justify-center ">
-                <img className='w-[80%] h-[80%] drop-shadow-2xl group-hover:scale-[1.1] transition-all duration-300' src={product.img.src} alt={product.title} />
-                <Box className="p-4 absolute -bottom-88 group-hover:bottom-0 h-full w-full bg-blue-500/20 backdrop-blur-sm transition-all duration-300">
-                  <Typography variant="body1" component="div" className="font-bold mb-2 text-center">
-                    {product.title}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" className="mb-2">
-                    کد محصول: {product.code}
-                  </Typography>
-                  <ul>
-                    {product.discriptions.map((desc, index) => (
-                      <li key={index} className="text-sm">- {desc}</li>
-                    ))}
-                  </ul>
-                  <Link href={`/products/${product.id}`}>
-                    <IconButton sx={{ bgcolor: "primary.main", color: "white", position: "absolute", right: "10px", bottom: "10px", ":hover": { rotate: "45deg" }, transition: "all 150ms ease" }} size="medium">
-                      <ArrowBack fontSize='5px' />
-                    </IconButton>
-                  </Link>
-                </Box>
-              </Box>
+              <Product key={product.id} product={product} />
             ))}
           </Box>
         </Box>
@@ -245,7 +220,7 @@ const Home = async () => {
         </Box>
       </section>
 
-      <section className="container mx-auto">
+      {/* <section className="container mx-auto">
         <Box className="">
           <Box className="flex w-full items-center justify-between py-2">
             <Typography variant="h6" component="div" className="font-bold">
@@ -263,31 +238,11 @@ const Home = async () => {
           </Box>
           <Box className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-20 md:px-0">
             {products.slice(0, 4).map(product => (
-              <Box key={product.id} className="h-100 bg-white shadow-xl rounded-xl relative overflow-hidden group flex items-center justify-center ">
-                <img className='w-[80%] h-[80%] drop-shadow-2xl group-hover:scale-[1.1] transition-all duration-300' src={product.img.src} alt={product.title} />
-                <Box className="p-4 absolute -bottom-88 group-hover:bottom-0 h-full w-full bg-blue-500/20 backdrop-blur-sm transition-all duration-300">
-                  <Typography variant="body1" component="div" className="font-bold mb-2 text-center">
-                    {product.title}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" className="mb-2">
-                    کد محصول: {product.code}
-                  </Typography>
-                  <ul>
-                    {product.discriptions.map((desc, index) => (
-                      <li key={index} className="text-sm">- {desc}</li>
-                    ))}
-                  </ul>
-                  <Link href={`/products/${product.id}`}>
-                    <IconButton sx={{ bgcolor: "primary.main", color: "white", position: "absolute", right: "10px", bottom: "10px", ":hover": { rotate: "45deg" }, transition: "all 150ms ease" }} size="medium">
-                      <ArrowBack fontSize='5px' />
-                    </IconButton>
-                  </Link>
-                </Box>
-              </Box>
+              <Product key={product.id} product={product} />
             ))}
           </Box>
         </Box>
-      </section>
+      </section> */}
 
       <div className="relative h-100 flex items-center overflow-hidden w-800 m-auto">
         {comments.map((comment, index) => (

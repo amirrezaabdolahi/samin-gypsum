@@ -10,21 +10,21 @@ import Link from 'next/link'
 const page =  async () => {
 
 
-    const getData = async () => {
-        try {
-            const res = await fetch("http://localhost:3000/api/products", { cache: "no-cache" })
-            const { data } = await res.json()
+    // const getData = async () => {
+    //     try {
+    //         const res = await fetch("http://localhost:3000/api/products", { cache: "no-cache" })
+    //         const { data } = await res.json()
 
 
-            return (data)
-        } catch (error) {
-            console.log("error in getting data from page : ", error.message);
-        }
-    }
+    //         return (data)
+    //     } catch (error) {
+    //         console.log("error in getting data from page : ", error.message);
+    //     }
+    // }
 
-    const products_1 = await getData()
+    // const products_1 = await getData()
 
-    console.log(products_1);
+    // console.log(products_1);
 
 
     return (
@@ -34,21 +34,21 @@ const page =  async () => {
                 <Typography variant='body1' className='text-gray-500'>32 محصول</Typography>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-5">
-                {products_1.map(product => (
+                {products.map(product => (
                     <Box key={product.id} className="bg-white group shadow-lg rounded-lg h-auto flex gap-2 flex-col justify-between p-5">
-                        <img src={product.image} alt={product.name} className='group-hover:drop-shadow-2xl transition-all duration-300' />
+                        <img src={product.img.src} alt={product.name} className='group-hover:drop-shadow-2xl transition-all duration-300' />
                         <Typography variant='body1' sx={{ textAlign: 'center', fontWeight: "bold" }}>
-                            {product.name}
+                            {product.title}
                         </Typography>
                         <ul>
-                            {/* {product.discriptions.map((des, index) => (
+                            {product.discriptions.map((des, index) => (
                                 <li key={index}>
                                     <Typography variant='body2'>
                                         -{des}
                                     </Typography>
                                 </li>
-                            ))} */}
-                            <li>{product.description}</li>
+                            ))}
+                            {/* <li>{product.description}</li> */}
                         </ul>
                         <Link href={`/products/${product.id}`} >
                             <Button variant='contained' endIcon={<ArrowBack />} className='w-full'>مشاهده</Button>
