@@ -118,35 +118,33 @@ const Home = async () => {
 
     <div className='overflow-hidden '>
 
-      <section className="container px-3 mx-auto h-[80svh] mt-25 md:mt-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 items-center h-full ">
-          <div className="relative flex items-center justify-center md:justify-end">
-            <div className="parallelogram absolute -z-10 w-[90%] lg:w-[70%] h-full"></div>
-            <Image src={productimg} alt='product' className='w-80 h-80 md:w-100 md:h-100 ' width={300} height={300} />
+      <div className="relative flex items-center justify-center h-180 lg:h-200" style={{ backgroundImage: `url(${headerbg.src})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10 z-0"></div>
+        <section className="container z-40 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 items-center  ">
+            <div className="relative flex items-center justify-center md:justify-end">
+              <div className="parallelogram absolute -z-10 w-[90%] lg:w-[70%] h-full"></div>
+              <Image src={productimg} alt='product' className='w-80 h-80 md:w-100 md:h-100 ' width={300} height={300} />
+            </div>
+            <div className="flex flex-col gap-3 items-center md:items-start">
+              <Typography variant='h6' sx={{ color: "white" , fontSize: { xs: "15px", lg: "20px" } }}>
+                فروش انحصاری انواع گچ
+              </Typography>
+              <Typography variant='h2' sx={{ fontWeight: 'bold', fontSize: { xs: "40px", lg: "60px" } }}>
+                شرکت گچ ثمین
+              </Typography>
+              <Typography variant='body1' className='text-gray-100 text-center md:text-start'>
+                کیفیت را می‌سازیم تا شما با خیال آسوده بسازید،
+                <br />
+                اعتماد شما سرمایه اصلی ماست
+              </Typography>
+              <Link href="/products">
+                <Button variant='contained' className='w-max' endIcon={<ArrowBack />}>مشاهده محصولات</Button>
+              </Link>
+            </div>
           </div>
-          <div className="flex flex-col gap-3 items-center md:items-start">
-            <Typography variant='h6' sx={{ color: "primary.main", fontSize: { xs: "15px", lg: "20px" } }}>
-              فروش انحصاری انواع گچ
-            </Typography>
-            <Typography variant='h2' sx={{ fontWeight: 'bold', fontSize: { xs: "40px", lg: "60px" } }}>
-              شرکت گچ ثمین
-            </Typography>
-            <Typography variant='body1' className='text-gray-500 text-center md:text-start'>
-              کیفیت را می‌سازیم تا شما با خیال آسوده بسازید،
-              <br />
-              اعتماد شما سرمایه اصلی ماست
-            </Typography>
-            <Link href="/products">
-              <Button variant='contained' className='w-max' endIcon={<ArrowBack />}>مشاهده محصولات</Button>
-            </Link>
-          </div>
-        </div>
-        <div className="text-center">
-          <IconButton sx={{ backgroundColor: 'primary.main', color: 'white' }}>
-            <ArrowDownward />
-          </IconButton>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section className="container px-3 mx-auto">
         <Box className="mt-20">
@@ -247,7 +245,7 @@ const Home = async () => {
       </section> */}
 
       <div className="h-100 flex items-center justify-center relative" style={{ backgroundImage: `url(${headerbg.src})`, backgroundSize: "cover", backgroundAttachment: "fixed", backgroundPosition: 'bottom' }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10 z-10"></div>
         <section className='container px-3 mx-auto flex items-center justify-center flex-col gap-2 text-white z-40' >
           <Typography variant='h4' className='!font-extrabold ' >
             پیگیری محصول
