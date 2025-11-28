@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react'
-import { ArrowBack, AutoAwesomeMosaic, Close, Construction, Home, Info, Menu, Pending, QuestionMark } from '@mui/icons-material';
+import { ArrowBack, AutoAwesomeMosaic, Close, Construction, Home, Info, LocalShipping, Menu, Pending, QuestionMark } from '@mui/icons-material';
 import { Button, IconButton, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -44,6 +44,12 @@ const links = [
     title: 'محصولات',
     path: "/products",
     icon: <AutoAwesomeMosaic color='primary.main' />
+  },
+  {
+    id: 5,
+    title: 'پیگیری',
+    path: "/followup",
+    icon: <LocalShipping color='primary.main' />
   },
 ]
 

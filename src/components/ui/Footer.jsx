@@ -2,6 +2,8 @@ import { Instagram, Telegram, WhatsApp } from '@mui/icons-material'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import logo from "../../../public/icons/LOGO.png"
+
 
 const Footer = () => {
     return (
@@ -25,7 +27,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className="flex gap-3 items-center">
-                        <Image src="./logosamin.svg" alt="logo" className='object-cover w-25 h-25' width={50} height={50} />
+                        <Image src={logo} alt="logo" className='object-cover w-25 h-25' width={50} height={50} />
                         <p className='text-2xl font-bold' >گچ ثمین</p>
                     </div>
                 </div>

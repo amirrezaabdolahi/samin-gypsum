@@ -1,9 +1,9 @@
 import React from 'react'
 import { Box, Button, IconButton, Rating, Typography } from '@mui/material'
-import { AccountCircle, ArrowBack, ArrowDownward  } from '@mui/icons-material'
+import { AccountCircle, ArrowBack, ArrowDownward } from '@mui/icons-material'
 import Link from 'next/link'
 import Image from 'next/image'
-  
+
 import p1 from "../../public/assets/products/p1.png"
 import p2 from "../../public/assets/products/p2.png"
 import p3 from "../../public/assets/products/p3.png"
@@ -14,6 +14,8 @@ import p6 from "../../public/assets/products/p6.png"
 import c1 from "../../public/assets/certificates/c1.png"
 import c2 from "../../public/assets/certificates/c2.png"
 import c3 from "../../public/assets/certificates/c3.png"
+
+import headerbg from "../../public/assets/samin.jpg"
 
 import productimg from "../../public/assets/products/product-w.png"
 
@@ -114,13 +116,13 @@ const Home = async () => {
 
   return (
 
-    <div className='overflow-hidden px-2'>
+    <div className='overflow-hidden '>
 
-      <section className="container mx-auto h-[80dvh] mt-25 md:mt-0">
+      <section className="container px-3 mx-auto h-[80svh] mt-25 md:mt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 items-center h-full ">
           <div className="relative flex items-center justify-center md:justify-end">
-            <div className="parallelogram absolute -z-10 w-[70%] h-full"></div>
-            <Image src={productimg} alt='product' className='w-80 h-80    md:w-100 md:h-100 ' width={300} height={300} />
+            <div className="parallelogram absolute -z-10 w-[90%] lg:w-[70%] h-full"></div>
+            <Image src={productimg} alt='product' className='w-80 h-80 md:w-100 md:h-100 ' width={300} height={300} />
           </div>
           <div className="flex flex-col gap-3 items-center md:items-start">
             <Typography variant='h6' sx={{ color: "primary.main", fontSize: { xs: "15px", lg: "20px" } }}>
@@ -146,11 +148,11 @@ const Home = async () => {
         </div>
       </section>
 
-      <section className="container mx-auto">
+      <section className="container px-3 mx-auto">
         <Box className="mt-20">
           <Box className="flex w-full items-center justify-between py-2">
             <Typography variant="h6" component="div" className="font-bold">
-               محصولات
+              محصولات
             </Typography>
             <Link href="/products">
               <Button
@@ -170,7 +172,7 @@ const Home = async () => {
         </Box>
       </section>
 
-      <section className="container mx-auto">
+      <section className="container px-3 mx-auto">
         <Box
           sx={{
             bgcolor: "primary.light",
@@ -220,7 +222,7 @@ const Home = async () => {
         </Box>
       </section>
 
-      {/* <section className="container mx-auto">
+      {/* <section className="container px-3 mx-auto">
         <Box className="">
           <Box className="flex w-full items-center justify-between py-2">
             <Typography variant="h6" component="div" className="font-bold">
@@ -243,6 +245,23 @@ const Home = async () => {
           </Box>
         </Box>
       </section> */}
+
+      <div className="h-100 flex items-center justify-center relative" style={{ backgroundImage: `url(${headerbg.src})`, backgroundSize: "cover", backgroundAttachment: "fixed", backgroundPosition: 'bottom' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10 z-10"></div>
+        <section className='container px-3 mx-auto flex items-center justify-center flex-col gap-2 text-white z-40' >
+          <Typography variant='h4' className='!font-extrabold ' >
+            پیگیری محصول
+          </Typography>
+          <Typography variant='body1' className='text-center'>
+            برای پیگیری سفارش خود روی دکمه زیر<br /> کلیک کنید
+          </Typography>
+          <Link href="/followup" >
+            <Button variant='contained' size='large'>
+              پیگیری
+            </Button>
+          </Link>
+        </section>
+      </div>
 
       <div className="relative h-100 flex items-center overflow-hidden w-800 m-auto">
         {comments.map((comment, index) => (
