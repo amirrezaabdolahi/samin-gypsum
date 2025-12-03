@@ -11,7 +11,7 @@ const Product = ({ key, product }) => {
 
     return (
         <Box key={key} className="h-100 bg-white shadow-xl rounded-xl relative overflow-hidden group flex items-center justify-center ">
-            <img className={`w-[80%] h-[80%] drop-shadow-2xl group-hover:scale-[1.1] object-cover ${isInfoOpen && "scale-[1.1]"} transition-all duration-300`} src={product.img.src} alt={product.title} />
+            <img className={`w-[70%] h-[70%] drop-shadow-2xl group-hover:scale-[1.1] object-cover ${isInfoOpen && "scale-[1.1]"} transition-all duration-300`} src={product.img.src} alt={product.title} />
             <IconButton className='!absolute bottom-0 right-0 z-20' size='large' onClick={() => setIsInfoOpen(!isInfoOpen)}>
                 {isInfoOpen ? (<Close fontSize='large' className='group-hover:text-[#1565C0]' />): (<Menu fontSize = 'large' className = 'text-[#1565C0]' />)}
             </IconButton>
@@ -29,7 +29,7 @@ const Product = ({ key, product }) => {
                 </ul>
 
                 <Link href={`/products/${product.id}`}>
-                    <Button variant='outlined' size="medium">
+                    <Button variant='contained' size="medium">
                         مشاهده
                         <ArrowBack fontSize='5px' />
                     </Button>

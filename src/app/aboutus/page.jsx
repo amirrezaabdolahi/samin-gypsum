@@ -84,13 +84,17 @@ const AboutPage = () => {
                 <p className="block text-3xl md:text-4xl font-bold text-gray-700 mb-5">
                     گواهی ها
                 </p>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
-                    <img src={c1.src} className='w-full h-full shadow-lg rounded-lg overflow-hidden ' alt="گواهی اول" />
-                    <img src={c2.src} className='w-full h-full shadow-lg rounded-lg overflow-hidden ' alt="گواهی دوم" />
-                    <img src={c3.src} className='w-full h-full shadow-lg rounded-lg overflow-hidden ' alt="گواهی سوم" />
-                    <img src={c4.src} className='w-full h-full shadow-lg rounded-lg overflow-hidden ' alt="گواهی چهارم" />
+                <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4'>
+                    <img src={c1.src} className='w-full h-60 lg:h-full object-cover shadow-lg rounded-lg overflow-hidden ' alt="گواهی اول" />
+                    <img src={c2.src} className='w-full h-60 lg:h-full object-cover shadow-lg rounded-lg overflow-hidden ' alt="گواهی دوم" />
+                    <img src={c3.src} className='w-full h-60 lg:h-full object-cover shadow-lg rounded-lg overflow-hidden ' alt="گواهی سوم" />
+                    <img src={c4.src} className='w-full h-60 lg:h-full object-cover shadow-lg rounded-lg overflow-hidden ' alt="گواهی چهارم" />
+                    <div className="col-span-full flex justify-center">
+                        <img src={c5.src} className='w-150 h-60 lg:h-100 shadow-lg object-cover rounded-lg overflow-hidden ' alt="گواهی پنجم" />
+                    </div>
                 </div>
             </section>
+            
         </Box>
     )
 }

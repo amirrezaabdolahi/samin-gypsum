@@ -118,28 +118,28 @@ const Home = async () => {
 
     <div className='overflow-hidden '>
 
-      <div className="relative flex items-center justify-center h-180 lg:h-200" style={{ backgroundImage: `url(${headerbg.src})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10 z-0"></div>
+      <div className="relative flex items-center justify-center h-150 lg:h-170" style={{ backgroundImage: `url(${headerbg.src})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10 backdrop-blur-sm z-0"></div>
         <section className="container z-40 ">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 items-center  ">
             <div className="relative flex items-center justify-center md:justify-end">
               <div className="parallelogram absolute -z-10 w-[90%] lg:w-[70%] h-full"></div>
-              <Image src={productimg} alt='product' className='w-80 h-80 md:w-100 md:h-100 ' width={300} height={300} />
+              <Image src={productimg} alt='product' className='w-60 h-60 md:w-90 md:h-90 drop-shadow-xl' width={500} height={500} />
             </div>
-            <div className="flex flex-col gap-3 items-center md:items-start">
-              <Typography variant='h6' sx={{ color: "white" , fontSize: { xs: "15px", lg: "20px" } }}>
+            <div className="flex flex-col gap-1 items-center md:items-start">
+              <Typography variant='h6' sx={{ color: "white", fontSize: { xs: "15px", lg: "20px" } }}>
                 فروش انحصاری انواع گچ
               </Typography>
               <Typography variant='h2' sx={{ fontWeight: 'bold', fontSize: { xs: "40px", lg: "60px" } }}>
-                شرکت گچ ثمین
+                شرکت گچ <Typography component={'span'} sx={{ color: '', fontWeight: 'inherit', fontSize: 'inherit' }}>ثمین</Typography>
               </Typography>
-              <Typography variant='body1' className='text-gray-100 text-center md:text-start'>
+              <Typography variant='body2' className='text-gray-100 text-center md:text-start'>
                 کیفیت را می‌سازیم تا شما با خیال آسوده بسازید،
                 <br />
                 اعتماد شما سرمایه اصلی ماست
               </Typography>
               <Link href="/products">
-                <Button variant='contained' className='w-max' endIcon={<ArrowBack />}>مشاهده محصولات</Button>
+                <Button variant='contained' className='w-max' size='small' endIcon={<ArrowBack />}>مشاهده محصولات</Button>
               </Link>
             </div>
           </div>
@@ -162,7 +162,7 @@ const Home = async () => {
               </Button>
             </Link>
           </Box>
-          <Box className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-20 md:px-0">
+          <Box className="grid w-[100%] lg:w-[80%] mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-20 md:px-0">
             {products.slice(0, 4).map(product => (
               <Product key={product.id} product={product} />
             ))}
@@ -185,7 +185,7 @@ const Home = async () => {
             <Typography variant="h6" component="div" className="font-bold text-white drop-shadow-md">
               گواهی ها
             </Typography>
-            <Link href="/portfolio">
+            <Link href="/aboutus">
               <Button
                 variant="text"
                 endIcon={<ArrowBack />}
@@ -206,14 +206,14 @@ const Home = async () => {
             </Typography>
           </Box>
 
-          {/* Products Grid */}
+          {/* certificate Grid */}
           <Box className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 md:px-0 relative z-20">
             {certificates.map((certificate) => (
               <Box
                 key={certificate.id}
-                className="h-auto bg-white shadow-xl rounded-xl relative overflow-hidden group"
+                className="bg-white shadow-xl rounded-xl relative overflow-hidden group w-full h-110"
               >
-                <img src={certificate.img.src} className=' object-fill ' alt="certificate" />
+                <Image src={certificate.img.src} className='object-cover' fill alt="certificate" />
               </Box>
             ))}
           </Box>

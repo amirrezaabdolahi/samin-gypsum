@@ -75,10 +75,10 @@ const Navbar = ({ }) => {
 
   return (
     <>
-      <div className="container !w-[95%] mx-auto z-50 shadow bg-gray-300/50 px-5 py-2 md:py-0  fixed top-2 md:top-5 rounded-3xl backdrop-blur-sm right-0 left-0">
+      <div className="container !w-[95%] mx-auto z-50 shadow bg-gray-300/50 px-5 py-2  fixed top-2 md:top-5 rounded-3xl backdrop-blur-sm right-0 left-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-0">
-            <Image src={logo} alt="logo" className='object-cover w-12 h-12 md:w-23 md:h-23' width={100} height={100} />
+            <Image src={logo} alt="logo" className='object-cover w-12 h-12 md:w-15 md:h-15' width={100} height={100} />
             <p className='text-lg md:text-xl lg:text-2xl font-bold' >گچ ثمین سمنان </p>
           </div>
           <ul className='hidden md:flex items-center gap-4 bg-white border-y border-gray-300 rounded-2xl py-2 px-4 shadow'>
@@ -99,17 +99,16 @@ const Navbar = ({ }) => {
             <a href="https://wa.me/989029820513?text=سلام%20من%20از%20سایت%20شما%20پیام%20می‌دم%20و%20می‌خواستم%20درباره%20محصولاتتون%20بپرسم" target="_blank">
               <Button variant='contained' className='text-center rounded-lg p-0 !hidden lg:!inline'>
                 <span className='hidden lg:inline'>درخواست مشاوره</span>
-                <Pending className='' />
+                <Pending className='mr-2' />
               </Button>
-              <IconButton sx={{bgcolor : 'primary.main' , color : 'white'}} className='lg:!hidden' size='small'>
-                <QuestionMark fontSize='small'/>
-
+              <IconButton sx={{ bgcolor: 'primary.main', color: 'white' }} className='lg:!hidden' size='small'>
+                <QuestionMark sx={{fontSize:15}} />
               </IconButton>
             </a>
             <div className="md:hidden">
               <IconButton size='large' onClick={toggleDrawer(true)}>
                 {
-                  state.left ? (<Close sx={{ color: 'gray' }}  fontSize='large' />) : (<Menu sx={{ color: 'gray' }} fontSize='large' />)
+                  state.left ? (<Close sx={{ color: 'gray' }} fontSize='' />) : (<Menu sx={{ color: 'gray' }} fontSize='' />)
                 }
               </IconButton>
             </div>
