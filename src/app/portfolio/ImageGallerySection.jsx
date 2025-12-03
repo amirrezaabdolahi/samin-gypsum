@@ -20,8 +20,13 @@ const ImageGallerySection = () => {
         { id: 9, src: '/assets/gallery/pics/p(9).jpg', alt: 'Image 9' },
         { id: 10, src: '/assets/gallery/pics/p(10).jpg', alt: 'Image 10' },
         { id: 11, src: '/assets/gallery/pics/p(11).jpg', alt: 'Image 11' },
+        { id: 12, src: '/assets/gallery/pics/p(12).jpg', alt: 'Image 11' },
         { id: 13, src: '/assets/gallery/pics/p(13).jpg', alt: 'Image 13' },
         { id: 14, src: '/assets/gallery/pics/p(14).jpg', alt: 'Image 14' },
+        { id: 15, src: '/assets/gallery/pics/p(15).jpg', alt: 'Image 15' },
+        { id: 16, src: '/assets/gallery/pics/p(16).jpg', alt: 'Image 16' },
+        { id: 17, src: '/assets/gallery/pics/p(17).jpg', alt: 'Image 17' },
+        { id: 18, src: '/assets/gallery/pics/p(18).jpg', alt: 'Image 18' },
     ]
 
     return (
