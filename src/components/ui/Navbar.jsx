@@ -14,8 +14,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
 
 import logo from "../../../public/icons/LOGO.png"
 
@@ -29,7 +28,7 @@ const links = [
   },
   {
     id: 2,
-    title: 'نمونه کارها',
+    title: 'شرکت',
     path: "/portfolio",
     icon: <Construction color='primary.main' />
   },
@@ -79,7 +78,7 @@ const Navbar = ({ }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-0">
             <Image src={logo} alt="logo" className='object-cover w-12 h-12 md:w-15 md:h-15' width={100} height={100} />
-            <p className='text-lg md:text-xl lg:text-2xl font-bold' >گچ ثمین سمنان </p>
+            <p className='text-lg md:text-xl lg:text-2xl font-bold' > ثمین گچ سمنان</p>
           </div>
           <ul className='hidden md:flex items-center gap-4 bg-white border-y border-gray-300 rounded-2xl py-2 px-4 shadow'>
             {
@@ -102,7 +101,7 @@ const Navbar = ({ }) => {
                 <Pending className='mr-2' />
               </Button>
               <IconButton sx={{ bgcolor: 'primary.main', color: 'white' }} className='lg:!hidden' size='small'>
-                <QuestionMark sx={{fontSize:15}} />
+                <QuestionMark sx={{ fontSize: 15 }} />
               </IconButton>
             </a>
             <div className="md:hidden">

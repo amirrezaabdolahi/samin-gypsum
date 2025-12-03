@@ -8,8 +8,6 @@ import p1 from "../../public/assets/products/p1.png"
 import p2 from "../../public/assets/products/p2.png"
 import p3 from "../../public/assets/products/p3.png"
 import p4 from "../../public/assets/products/p4.png"
-import p5 from "../../public/assets/products/p5.png"
-import p6 from "../../public/assets/products/p6.png"
 
 import c1 from "../../public/assets/certificates/c1.png"
 import c2 from "../../public/assets/certificates/c2.png"
@@ -26,55 +24,35 @@ export const products = [
   {
     id: 1,
     code: 857,
-    title: "بتونه درزگیر",
+    title: "گچ سپنتا سمنان",
     boolQty: true,
-    discriptions: ["قدرت چسبندگی بسیار زیاد", "مقاومت مکانیکی مناسب", "زمان گیرش و کارپذیری بالا"],
+    discriptions: ['25 کیلوگرم ', '30 کیلوگرم'],
     img: p1
   },
   {
     id: 2,
     code: 888,
-    title: "بتونه ماستیک",
+    title: "گچ یاسمین سمنان",
     boolQty: true,
-    discriptions: ["قدرت چسبندگی بالا", "سمباده‌خوری خوب", "زمان گیرش و کارپذیری مناسب"],
+    discriptions: ['25 کیلوگرم ', '30 کیلوگرم'],
     img: p2
   },
   {
     id: 3,
     code: 231,
-    title: "گچ پلیمری زیرکار سیوا دستی",
+    title: "گچ عصار سمنان",
     boolQty: true,
-    discriptions: ["عایق مناسب حرارت، صوت و رطوبت", "مقاومت بالا در برابر نیروهای فشاری، خمشی، ترک‌خوردگی", "چسبندگی بسیار بالا به سطوح مختلف از قبیل سنگ و آجر"],
+    discriptions: ['25 کیلوگرم ', '30 کیلوگرم'],
 
     img: p3
   },
   {
     id: 4,
     code: 123,
-    title: "گچ سیوای پاششی",
+    title: "گچ جلیل سمنان",
     boolQty: true,
-    discriptions: ["سرعت بسیار بالای کار و کاهش زمان گچ‌کاری", "کاهش ضایعات گچ", "زمان گیرش بالاتر از گچ‌های معمولی", "پرکردن تخلل موجود در سطح به دلیل فشار پاشش"],
+    discriptions: ['25 کیلوگرم ', '30 کیلوگرم'],
     img: p4
-  },
-  {
-    id: 5,
-    code: 534,
-    title: "پرلیت منبسط",
-    boolQty: true,
-    discriptions: [
-      "سبک‌سازی مصالح ساختمانی",
-      "پرکننده و ماده حامل در بسیاری صنایع مانند کاشی و سرامیک، متالورژی، کشاورزی ",
-      "به عنوان عایق صوت، حرارت، حریق و رطوبت"
-    ],
-    img: p5
-  },
-  {
-    id: 6,
-    code: 756,
-    title: "گچ ضد آب",
-    boolQty: true,
-    discriptions: ["قدرت چسبندگی بسیار زیاد", "عایق مناسب صوت و حرارت"],
-    img: p6
   },
 ]
 

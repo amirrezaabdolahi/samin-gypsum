@@ -31,7 +31,7 @@ const page =  async () => {
         <div className='container mx-auto mt-40 px-2 md:px-0'>
             <div className="w-full flex items-center justify-between py-5">
                 <Typography variant='h5' className='!font-bold'>محصولات</Typography>
-                <Typography variant='body1' className='text-gray-500'>32 محصول</Typography>
+                <Typography variant='body1' className='text-gray-500'>{products.length} محصول</Typography>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-5">
                 {products.map(product => (

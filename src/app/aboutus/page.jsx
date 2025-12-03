@@ -17,7 +17,7 @@ const AboutPage = () => {
                     <header className="text-center mb-10">
                         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
                             <span className="block text-4xl md:text-5xl text-gray-700">شرکت</span>
-                            <span className="block text-5xl md:text-7xl text-[#1565C0] mt-2">گچ ثمین سمنان</span>
+                            <span className="block text-5xl md:text-7xl text-[#1565C0] mt-2">ثمین گچ سمنان</span>
                             <span className="block text-lg md:text-xl text-gray-500 mt-4">سفیدی، خلوص و استحکام برای خانه‌ها و پروژه‌های شما</span>
                         </h1>
                     </header>
@@ -27,7 +27,7 @@ const AboutPage = () => {
                         <div className="lg:col-span-2 p-4">
                             <h2 className="text-2xl font-semibold mb-4">درباره ما</h2>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                شرکت <strong>گچ ثمین سمنان</strong>، با شماره ثبت <strong>۱۰۸۶۰۰۹۴۹۱۰</strong> و تاریخ تأسیس <strong>۲۰ مهر ۱۳۸۱</strong>, یکی از پیشگامان تولید مصالح گچی در استان سمنان و سراسر کشور است. ما از آغاز مسیر خود، کیفیت، نوآوری و مشتری‌مداری را به‌عنوان سه اصل بنیادین سرلوحه‌ی فعالیت‌هایمان قرار داده‌ایم.
+                                شرکت <strong>ثمین گچ سمنان</strong>، با شماره ثبت <strong>۱۰۸۶۰۰۹۴۹۱۰</strong> و تاریخ تأسیس <strong>۲۰ مهر ۱۳۸۱</strong>, یکی از پیشگامان تولید مصالح گچی در استان سمنان و سراسر کشور است. ما از آغاز مسیر خود، کیفیت، نوآوری و مشتری‌مداری را به‌عنوان سه اصل بنیادین سرلوحه‌ی فعالیت‌هایمان قرار داده‌ایم.
                             </p>
 
                             <h3 className="text-xl font-medium mt-4">مأموریت ما</h3>
@@ -51,7 +51,7 @@ const AboutPage = () => {
                             <div>
                                 <h4 className="text-lg font-semibold mb-2">ظرفیت و موقعیت کارخانه</h4>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    کارخانه‌ی گچ ثمین سمنان در <strong>کیلومتر ۱۸ جاده فیروزکوه، بخش کهپرسرخه (جهنم‌دره)</strong> واقع شده است. این مجموعه با تجهیزات پیشرفته و خطوط تولید به‌روز، توان تولید گچ سفیدکاری، گچ دو سرنده و انواع گچ ساختمانی را در ظرفیت بالا دارد.
+                                    کارخانه‌ی ثمین گچ سمنان در <strong>کیلومتر ۱۸ جاده فیروزکوه، بخش کهپرسرخه (جهنم‌دره)</strong> واقع شده است. این مجموعه با تجهیزات پیشرفته و خطوط تولید به‌روز، توان تولید گچ سفیدکاری، گچ دو سرنده و انواع گچ ساختمانی را در ظرفیت بالا دارد.
                                 </p>
 
                                 <h4 className="text-lg font-semibold mb-2">چشم‌انداز</h4>

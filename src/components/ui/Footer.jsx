@@ -30,13 +30,13 @@ const Footer = () => {
                         </div>
                         <div className="flex gap-3 items-center">
                             <Image src={logo} alt="logo" className='object-cover w-25 h-25' width={50} height={50} />
-                            <p className='text-2xl font-bold' >گچ ثمین</p>
+                            <p className='text-2xl font-bold' >ثمین گچ</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="text-black text-center py-2">
-                <Typography variant='subtitle2' >تمامی حقوق این سایت متعلق به گچ ثمین می‌باشد. © 2024 </Typography>
+                <Typography variant='subtitle2' >تمامی حقوق این سایت متعلق به ثمین گچ می‌باشد. © 2024 </Typography>
                 <a href="https://amirrezaabdollahi.vercel.app/" target="_blank" className='font-bold text-blue-700 hover:underline text-sm md:text-md '>
                     ساخته شده توسط گروه
                     ZiroBit

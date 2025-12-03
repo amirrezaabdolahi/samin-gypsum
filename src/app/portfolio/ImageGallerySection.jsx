@@ -20,7 +20,6 @@ const ImageGallerySection = () => {
         { id: 9, src: '/assets/gallery/pics/p(9).jpg', alt: 'Image 9' },
         { id: 10, src: '/assets/gallery/pics/p(10).jpg', alt: 'Image 10' },
         { id: 11, src: '/assets/gallery/pics/p(11).jpg', alt: 'Image 11' },
-        { id: 12, src: '/assets/gallery/pics/p(12).jpg', alt: 'Image 12' },
         { id: 13, src: '/assets/gallery/pics/p(13).jpg', alt: 'Image 13' },
         { id: 14, src: '/assets/gallery/pics/p(14).jpg', alt: 'Image 14' },
     ]
