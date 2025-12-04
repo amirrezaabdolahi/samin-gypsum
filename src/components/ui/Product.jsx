@@ -10,30 +10,18 @@ const Product = ({ key, product }) => {
     const [isInfoOpen, setIsInfoOpen] = useState(false)
 
     return (
-        <Box key={key} className="h-100 bg-white shadow-xl rounded-xl relative overflow-hidden group flex items-center justify-center ">
-            <img className={`w-[70%] h-[70%] drop-shadow-2xl group-hover:scale-[1.1] object-cover ${isInfoOpen && "scale-[1.1]"} transition-all duration-300`} src={product.img.src} alt={product.title} />
-            <IconButton className='!absolute bottom-0 right-0 z-20' size='large' onClick={() => setIsInfoOpen(!isInfoOpen)}>
-                {isInfoOpen ? (<Close fontSize='large' className='group-hover:text-[#1565C0]' />): (<Menu fontSize = 'large' className = 'text-[#1565C0]' />)}
-            </IconButton>
-            <Box className={`p-4 absolute -bottom-[100%] ${isInfoOpen && "!bottom-0"} h-full w-full bg-blue-500/20 backdrop-blur-sm transition-all duration-300 flex flex-col gap-4`}>
-                <Typography variant="body1" component="div" className="font-bold mb-2 text-center">
-                    {product.title}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" className="mb-2">
-                    کد محصول: {product.code}
-                </Typography>
-                <ul>
-                    {product.discriptions.map((desc, index) => (
-                        <li key={index} className="text-sm">- {desc}</li>
-                    ))}
-                </ul>
-
-                <Link href={`/products/${product.id}`}>
-                    <Button variant='contained' size="medium">
-                        مشاهده
-                        <ArrowBack fontSize='5px' />
-                    </Button>
-                </Link>
+        <Box key={key} className="shadow-lg w-[90%] m-auto md:w-auto group border border-gray-200 bg-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+            <div className=" bg-gray-300/50 rounded-xl overflow-hidden flex justify-center items-center">
+                <img src={product.img.src} alt={product.title} className='w-70 md:w-80 lg:w-full group-hover:scale-105 transition-transform duration-200' />
+            </div>
+            <Link href={`/products/${product.id}`}>
+                <Button variant='contained' endIcon={<ArrowBack/>}>
+                    <Typography variant='body2'>{product.title}</Typography>
+                </Button>
+            </Link>
+            <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={1}>
+                <Typography variant='subtitle2'>کد محصول:</Typography>
+                <Typography variant='subtitle2' fontWeight={'bold'}>{product.code}</Typography>
             </Box>
         </Box>
     )

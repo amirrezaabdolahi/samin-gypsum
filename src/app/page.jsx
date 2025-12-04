@@ -245,10 +245,10 @@ const Home = async () => {
             className={`w-80 h-55 border border-gray-200 rounded-lg text-center bg-white shadow-lg p-3 flex items-center justify-between flex-col absolute left-[100%]`}
             style={{ animationName: "scrollleft", animationDuration: "30s", animationTimingFunction: "linear", animationIterationCount: 'infinite', animationDelay: `calc(30s / ${comments.length} * (${comments.length} - 1) * -${index + 1})` }}
             key={index}>
-            <AccountCircle sx={{ fontSize: 50 }} className='text-gray-500' />
-            <p className='font-bold'>{comment.name}</p>
+            <AccountCircle sx={{ fontSize: {xs : 30 , md: 50} }} className='text-gray-500' />
+            <Typography variant='body1' className='!font-bold'>{comment.name}</Typography>
             <Rating name="half-rating-read" defaultValue={comment.rating} precision={0.5} readOnly />
-            <p className='text-gray-800'>{comment.comment}</p>
+            <Typography variant='body2' className='text-gray-800'>{comment.comment}</Typography>
           </div>
         ))}
       </div>

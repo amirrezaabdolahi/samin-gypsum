@@ -12,7 +12,7 @@ const ProductPage = async ({ params }) => {
         notFound()
     }
 
-    const phone = '989029820513' // شماره واتساپ با کد کشور بدون +
+    const phone = '989029820513'
     const message = `سلام من میخواستم از این محصول استعلام بگیرم
     نام محصول : ${product.title}
     کد محصول : ${product.code}`;
@@ -25,9 +25,9 @@ const ProductPage = async ({ params }) => {
                     <img src={product.img.src} className='w-100 md:w-200' alt={product.title} />
                 </Box>
             </Box>
-            <Box className="h-full flex items-center justify-start">
+            <Box className="h-full flex items-start mt-4 md:mt-0 md:items-center  justify-start">
                 <div className="px-3 flex-col flex gap-2">
-                    <Typography variant='h3' className='!font-bold'>
+                    <Typography variant='h3' className='!font-bold' sx={{fontSize: {xs : 30 , md : 40 , lg:45}}} >
                         {product.title}
                     </Typography>
                     <Typography variant='body1'>
@@ -36,13 +36,13 @@ const ProductPage = async ({ params }) => {
                     <ul>
                         {product.discriptions.map((des, index) => (
                             <li key={index}>
-                                <Typography variant='h6' className='text-gray-700 !font-light'>
+                                <Typography variant='body1' className='text-gray-700 !font-light'>
                                     -{des}
                                 </Typography>
                             </li>
                         ))}
                     </ul>
-                    <a href={whatsappUrl} target="_blank">
+                    <a href={whatsappUrl} target="_blank" className='mt-2'>
                         <Button variant='contained' endIcon={<Shop />}>
                             جهت سفارش کلیک کنید
                         </Button>
